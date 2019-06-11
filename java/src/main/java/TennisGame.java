@@ -46,11 +46,14 @@ public class TennisGame {
             int minusResult = m_score1-m_score2;
             if (minusResult==1) {
                 score ="Advantage player1";
-            } else if (minusResult ==-1) {
+            }
+            else if (minusResult ==-1) {
                 score ="Advantage player2";
-            } else if (minusResult>=2) {
+            }
+            else if (minusResult>=2) {
                 score = "Win for player1";
-            } else {
+            }
+            else {
                 score ="Win for player2";
             }
         }
@@ -60,7 +63,9 @@ public class TennisGame {
             {
                 if (i==1) {
                     tempScore = m_score1;
-                } else { score+="-"; tempScore = m_score2;}
+                }
+                else { score+="-"; tempScore = m_score2;
+                }
                 switch(tempScore)
                 {
                     case 0:
