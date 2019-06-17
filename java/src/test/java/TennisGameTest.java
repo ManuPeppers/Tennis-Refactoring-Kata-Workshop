@@ -7,7 +7,7 @@ public class TennisGameTest {
     @Test
     public void getScoreStartGame() {
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         assertEquals("Love-All",tennisGame.getScore());
 
@@ -16,7 +16,8 @@ public class TennisGameTest {
     @Test
     public void getScoreFifteenAll(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
+
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player2");
@@ -26,9 +27,9 @@ public class TennisGameTest {
     }
 
     @Test
-    public void getScoreFifteeThirtyAll(){
+    public void getScoreThirtyAll(){
 
-        TennisGame tennisGame = new TennisGame("P1", "P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player2");
@@ -42,7 +43,7 @@ public class TennisGameTest {
     @Test
     public void getScoreDeuce(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player2");
@@ -58,7 +59,7 @@ public class TennisGameTest {
     @Test
     public void getScoreFifteenLove(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
 
@@ -69,7 +70,7 @@ public class TennisGameTest {
     @Test
     public void getScoreThirtyLove(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player1");
@@ -81,7 +82,7 @@ public class TennisGameTest {
     @Test
     public void getScoreFortyLove(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player1");
@@ -94,7 +95,7 @@ public class TennisGameTest {
     @Test
     public void getScoreLoveFifteen(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player2");
 
@@ -105,7 +106,7 @@ public class TennisGameTest {
     @Test
     public void getScoreLoveThirty(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player2");
         tennisGame.wonPoint("player2");
@@ -117,7 +118,7 @@ public class TennisGameTest {
     @Test
     public void getScoreLoveForty(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player2");
         tennisGame.wonPoint("player2");
@@ -130,7 +131,7 @@ public class TennisGameTest {
     @Test
     public void getScoreAdvantagePlayer1(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player1");
@@ -149,7 +150,7 @@ public class TennisGameTest {
     @Test
     public void getScoreAdvantagePlayer2(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player2");
         tennisGame.wonPoint("player2");
@@ -168,7 +169,7 @@ public class TennisGameTest {
     @Test
     public void getScoreWinForPlayer2(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player2");
         tennisGame.wonPoint("player2");
@@ -188,7 +189,7 @@ public class TennisGameTest {
     @Test
     public void getScoreWinForPlayer1(){
 
-        TennisGame tennisGame = new TennisGame("P1","P2");
+        TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player1");
@@ -204,6 +205,5 @@ public class TennisGameTest {
         assertEquals("Win for player1", tennisGame.getScore());
 
     }
-
 
 }
