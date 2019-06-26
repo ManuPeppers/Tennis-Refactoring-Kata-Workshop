@@ -3,18 +3,18 @@ import java.util.Map;
 
 public class ScoreBoard {
 
-    Scores scores;
+    Player scorePlayers;
 
-    public ScoreBoard(Scores Scores) {
-        this.scores = Scores;
+    public ScoreBoard() {
+        this.scorePlayers=new Player();
     }
 
     public String displayPoints(){
-        int diff = scores.getPointPlayer1() - scores.getPointPlayer2();
+        int diff = scorePlayers.getPointPlayer1() - scorePlayers.getPointPlayer2();
 
         if (diff==0){
             return equalPoints();
-        } else if (scores.getPointPlayer1()>=4 || scores.getPointPlayer2()>=4){
+        } else if (scorePlayers.getPointPlayer1()>=4 || scorePlayers.getPointPlayer2()>=4){
             return advantagesPoints();
         } else {
             return oddPoints();
@@ -23,12 +23,12 @@ public class ScoreBoard {
 
     private String equalPoints(){
         String equalityTranslation[] = {"Love-All","Fifteen-All","Thirty-All","Deuce"};
-        return equalityTranslation[scores.getPointPlayer1()];
+        return equalityTranslation[scorePlayers.getPointPlayer1()];
     }
 
     private String oddPoints(){
         String oddTranslation[] = {"Love","Fifteen","Thirty","Forty"};
-        return oddTranslation[scores.getPointPlayer1()]+ "-" + oddTranslation[scores.getPointPlayer2()];
+        return oddTranslation[scorePlayers.getPointPlayer1()]+ "-" + oddTranslation[scorePlayers.getPointPlayer2()];
     }
 
     private String advantagesPoints(){
@@ -39,7 +39,7 @@ public class ScoreBoard {
         advantageMap.put(2, "Win for player1");
         advantageMap.put(-2,"Win for player2");
 
-        int minusResult = scores.getPointPlayer1()- scores.getPointPlayer2();
+        int minusResult = scorePlayers.getPointPlayer1()- scorePlayers.getPointPlayer2();
 
         return advantageMap.get(minusResult);
     }

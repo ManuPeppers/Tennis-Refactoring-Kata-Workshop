@@ -6,29 +6,23 @@ public class TennisGameTest {
 
     @Test
     public void getScoreStartGame() {
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
 
         assertEquals("Love-All",tennisGame.getScore());
-
     }
 
     @Test
     public void getScoreFifteenAll(){
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
-
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player2");
 
         assertEquals("Fifteen-All", tennisGame.getScore());
-
     }
 
     @Test
     public void getScoreThirtyAll(){
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
@@ -37,12 +31,10 @@ public class TennisGameTest {
         tennisGame.wonPoint("player2");
 
         assertEquals("Thirty-All", tennisGame.getScore());
-
     }
 
     @Test
     public void getScoreDeuce(){
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
@@ -58,25 +50,21 @@ public class TennisGameTest {
 
     @Test
     public void getScoreFifteenLove(){
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
 
         assertEquals("Fifteen-Love",tennisGame.getScore());
-
     }
 
     @Test
     public void getScoreThirtyLove(){
-
         TennisGame tennisGame = new TennisGame ("player1","player2");
 
         tennisGame.wonPoint("player1");
         tennisGame.wonPoint("player1");
 
         assertEquals("Thirty-Love",tennisGame.getScore());
-
     }
 
     @Test
