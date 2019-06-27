@@ -13,14 +13,14 @@ public class TennisGame {
 
     public void wonPoint(String playerName) {
         if (playerName.equals(player1.name)) {
-            scoreBoard.scorePlayers.incrementPointPlayer1();
+            player1.incrementPointPlayer1();
         } else {
-            scoreBoard.scorePlayers.incrementPointPlayer2();
+            player2.incrementPointPlayer2();
         }
     }
 
     public String getScore(){
-        return scoreBoard.displayPoints();
+        return scoreBoard.displayPoints(player1.getPointPlayer1(),player2.getPointPlayer2());
     }
 
 }

@@ -10,10 +10,6 @@ public class Player {
         pointPlayer2=0;
     }
 
-    public Player(){
-
-    }
-
     public int getPointPlayer1() {
         return pointPlayer1;
     }
@@ -28,12 +24,6 @@ public class Player {
 
     public void incrementPointPlayer2(){
         pointPlayer2 +=1;
-    }
-
-
-
-    public String getName() {
-        return name;
     }
 
 }
